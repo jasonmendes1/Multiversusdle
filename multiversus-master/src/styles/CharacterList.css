@@ -14,15 +14,17 @@
 }
 
 .character-card {
-  flex: 0 0 auto;
+  flex: 0 0 200px; /* Set a fixed width for each card */
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   margin-right: 20px; /* Add margin to create space between cards */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .character-image {
-  width: 100%;
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
   margin-bottom: 10px;
 }

@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #ffffff;
+  color: #000;
 }
 
 .container {
@@ -44,6 +44,7 @@ main {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   padding: 20px;
   border-radius: 10px; /* Optional: adds rounded corners to the main section */
+  color: #ffffff;
 }
 
 .character-list {
@@ -105,9 +106,9 @@ label {
 input[type="text"] {
   padding: 10px;
   border-radius: 5px;
-  border: 2px solid #ffffff;
+  border: 2px solid #000;
   background-color: #373737;
-  color: #ffffff;
+  color: #000;
   font-size: 1rem;
 }
 
@@ -116,7 +117,7 @@ button {
   border: none;
   border-radius: 5px;
   background-color: #ff5722;
-  color: #ffffff;
+  color: #000;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -154,4 +155,8 @@ footer p {
   to {
     clip-path: inset(0 -34% 0 0);
   }
+}
+
+.react-select-options {
+  color: black;
 }

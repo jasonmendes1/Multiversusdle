@@ -17,14 +17,12 @@ const useFetch = (url) => {
         return response.json();
       })
       .then((data) => {
-        console.log("Fetched data:", data);
         setData(data);
         setError(null);
       })
       .catch((error) => {
         if (error.name === "AbortError") {
           console.log("Fetch Aborted");
-          console.log("Fetched data:", data);
         } else {
           setError(error.message);
         }

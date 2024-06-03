@@ -19,9 +19,6 @@ const CharacterList = ({ characters, name }) => {
                 Universe: {character.universe}
               </p>
             </div>
-            <Link to={`/characters/${character.id}`} className="character-link">
-              View Details
-            </Link>
           </div>
         ))}
       </div>
