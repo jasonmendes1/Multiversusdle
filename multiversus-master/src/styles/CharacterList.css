@@ -1,0 +1,50 @@
+.character-grid-container {
+  overflow-x: auto;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+.list-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.character-card {
+  flex: 0 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-right: 20px; /* Add margin to create space between cards */
+}
+
+.character-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.character-info {
+  margin-bottom: 10px;
+}
+
+.character-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.character-universe {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.character-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: blue;
+}

@@ -1,0 +1,11 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Joker",
+      "class": "Mage / Ranged",
+      "universe": "DC Universe",
+      "image": "https://cdn.multiversus.com/roster/joker/joker-lg.webp"
+    }
+  ]
+}
