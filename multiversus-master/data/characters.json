@@ -23,9 +23,9 @@
     },
     {
       "id": 4,
-      "name": "Marvil the Martian",
+      "name": "Marvin the Martian",
       "class": "Assassin",
-      "universe": "Lonney Tunes",
+      "universe": "Looney Tunes",
       "image": "https://cdn.multiversus.com/roster/marvin/marvin-lg.webp"
     },
     {
@@ -34,6 +34,153 @@
       "class": "Mage / Ranged",
       "universe": "Gremlins",
       "image": "https://cdn.multiversus.com/roster/gizmo/gizmo-lg.webp"
+    },
+    {
+      "id": 6,
+      "name": "Batman",
+      "class": "Bruiser",
+      "universe": "DC Universe",
+      "image": "https://cdn.multiversus.com/roster/batman/batman-lg.webp"
+    },
+    {
+      "id": 7,
+      "name": "Superman",
+      "class": "Tank",
+      "universe": "DC Universe",
+      "image": "https://cdn.multiversus.com/roster/superman/superman-lg.webp"
+    },
+    {
+      "id": 8,
+      "name": "Wonder Woman",
+      "class": "Tank",
+      "universe": "DC Universe",
+      "image": "https://cdn.multiversus.com/roster/wonder-woman/wonder-woman-lg.webp"
+    },
+    {
+      "id": 9,
+      "name": "Harley Quinn",
+      "class": "Assassin",
+      "universe": "DC Universe",
+      "image": "https://cdn.multiversus.com/roster/harley/harley-lg.webp"
+    },
+    {
+      "id": 10,
+      "name": "Arya Stark",
+      "class": "Assassin",
+      "universe": "Game of Thrones",
+      "image": "https://cdn.multiversus.com/roster/arya/arya-lg.webp"
+    },
+    {
+      "id": 11,
+      "name": "Finn the Human",
+      "class": "Assassin",
+      "universe": "Adventure Time",
+      "image": "https://cdn.multiversus.com/roster/finn/finn-lg.webp"
+    },
+    {
+      "id": 12,
+      "name": "Jake the Dog",
+      "class": "Bruiser",
+      "universe": "Adventure Time",
+      "image": "https://cdn.multiversus.com/roster/jake/jake-lg.webp"
+    },
+    {
+      "id": 13,
+      "name": "Shaggy",
+      "class": "Bruiser",
+      "universe": "Scooby-Doo",
+      "image": "https://cdn.multiversus.com/roster/shaggy/shaggy-lg.webp"
+    },
+    {
+      "id": 14,
+      "name": "Velma",
+      "class": "Support",
+      "universe": "Scooby-Doo",
+      "image": "https://cdn.multiversus.com/roster/velma/velma-lg.webp"
+    },
+    {
+      "id": 15,
+      "name": "Tom & Jerry",
+      "class": "Mage / Ranged",
+      "universe": "Tom and Jerry",
+      "image": "https://cdn.multiversus.com/roster/tom-and-jerry/tom-and-jerry-lg.webp"
+    },
+    {
+      "id": 16,
+      "name": "Bugs Bunny",
+      "class": "Mage / Ranged",
+      "universe": "Looney Tunes",
+      "image": "https://cdn.multiversus.com/roster/bugs/bugs-lg.webp"
+    },
+    {
+      "id": 17,
+      "name": "Tasmanian Devil",
+      "class": "Bruiser",
+      "universe": "Looney Tunes",
+      "image": "https://cdn.multiversus.com/roster/taz/taz-lg.webp"
+    },
+    {
+      "id": 18,
+      "name": "Iron Giant",
+      "class": "Tank",
+      "universe": "The Iron Giant",
+      "image": "https://cdn.multiversus.com/roster/iron-giant/iron-giant-lg.webp"
+    },
+    {
+      "id": 19,
+      "name": "Steven Universe",
+      "class": "Support",
+      "universe": "Steven Universe",
+      "image": "https://cdn.multiversus.com/roster/steven/steven-lg.webp"
+    },
+    {
+      "id": 20,
+      "name": "Garnet",
+      "class": "Bruiser",
+      "universe": "Steven Universe",
+      "image": "https://cdn.multiversus.com/roster/garnet/garnet-lg.webp"
+    },
+    {
+      "id": 21,
+      "name": "Reindog",
+      "class": "Support",
+      "universe": "Original",
+      "image": "https://cdn.multiversus.com/roster/reindog/reindog-lg.webp"
+    },
+    {
+      "id": 22,
+      "name": "LeBron James",
+      "class": "Bruiser",
+      "universe": "Space Jam: A New Legacy",
+      "image": "https://cdn.multiversus.com/roster/lebron/lebron-lg.webp"
+    },
+    {
+      "id": 23,
+      "name": "Rick Sanchez",
+      "class": "Mage / Ranged",
+      "universe": "Rick and Morty",
+      "image": "https://cdn.multiversus.com/roster/rick/rick-lg.webp"
+    },
+    {
+      "id": 24,
+      "name": "Morty Smith",
+      "class": "Bruiser",
+      "universe": "Rick and Morty",
+      "image": "https://cdn.multiversus.com/roster/morty/morty-lg.webp"
+    },
+    {
+      "id": 25,
+      "name": "Black Adam",
+      "class": "Bruiser",
+      "universe": "DC Universe",
+      "image": "https://cdn.multiversus.com/roster/black-adam/black-adam-lg.webp"
+    },
+    {
+      "id": 26,
+      "name": "Stripe",
+      "class": "Assassin",
+      "universe": "Gremlins",
+      "image": "https://cdn.multiversus.com/roster/stripe/stripe-lg.webp"
     }
   ]
 }
