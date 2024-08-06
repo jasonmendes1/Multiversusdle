@@ -143,7 +143,7 @@ const Quiz = ({ characters }) => {
                 const { nameFeedback, classFeedback, universeFeedback } =
                   getFeedbackForAttempt(prevCharacter);
                 return (
-                  <div key={index}>
+                  <div classname="prev-character" key={index}>
                     <img
                       src={prevCharacter?.image}
                       alt={prevCharacter?.name}
