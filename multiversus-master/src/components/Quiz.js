@@ -24,36 +24,82 @@ const Quiz = ({ characters }) => {
   const [character, setCharacter] = useState(null);
   const [previousAttempts, setpreviousAttempts] = useState([]);
   const [result, setResult] = useState(null);
-  const options = characters.map((character) => ({
-    value: character.id,
-    label: character.name,
-    image: character.image,
-  }));
+  const [options, setOptions] = useState([]);
 
   useEffect(() => {
     if (characters) {
       const dailyCharacter = getDailyCharacter(characters);
       setCharacter(dailyCharacter);
+      setOptions(
+        characters.map((character) => ({
+          value: character.id,
+          label: character.name,
+          class: character.class,
+          universe: character.universe,
+          image: character.image,
+        }))
+      );
     }
   }, [characters]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // prevents submitting frm
+  const handleSubmit = (guess) => {
+    if (!guess) return;
+
+    const guessedCharacter = characters.find(
+      (character) => character.id === guess.value
+    );
+
+    let feedbackMessage = "";
+    let isCorrect = true;
+
     if (guess.label === character.name) {
-      setFeedback("✅ Correct!");
-      setResult(true);
+      // feedbackMessage += "✅ Name is Correct! ";
       setGuess("");
     } else {
-      setFeedback("❌ Incorrect. Try again!");
-      setResult(false);
+      // feedbackMessage += "❌ Name is Incorrect ";
+      isCorrect = false;
       setGuess("");
     }
+
+    if (guess.class == character.class) {
+      // feedbackMessage += "✅ Class is Correct! ";
+      setGuess("");
+    } else {
+      // feedbackMessage += "❌ Class is Incorrect ";
+      isCorrect = false;
+      setGuess("");
+    }
+
+    if (guess.universe == character.universe) {
+      // feedbackMessage += "✅ Universe is Correct! ";
+      setGuess("");
+    } else {
+      // feedbackMessage += "❌ Universe is Incorrect ";
+      isCorrect = false;
+      setGuess("");
+    }
+
+    setFeedback(feedbackMessage);
+    setResult(isCorrect);
 
     const newCharacter = characters.find(
       (character) => character.name === guess.label
     );
 
     setpreviousAttempts((previousValues) => [newCharacter, ...previousValues]);
+
+    // Remove the guessed option from the options
+    setOptions((currentOptions) =>
+      currentOptions.filter((option) => option.value !== guess.value)
+    );
+  };
+
+  const getFeedbackForAttempt = (attempt) => {
+    let nameFeedback = attempt.name === character.name ? "✅" : "❌";
+    let classFeedback = attempt.class === character.class ? "✅" : "❌";
+    let universeFeedback =
+      attempt.universe === character.universe ? "✅" : "❌";
+    return { nameFeedback, classFeedback, universeFeedback };
   };
 
   return (
@@ -81,29 +127,36 @@ const Quiz = ({ characters }) => {
                 required
                 placeholder="Guess the character"
                 value={guess}
-                onChange={(e) => setGuess(e)}
-                disabled
+                onChange={(guess) => {
+                  setGuess(guess);
+                  handleSubmit(guess); // Trigger submission on selection
+                }}
               />
-              <button type="submit">Submit</button>
+              {console.log("value: ", guess)}
             </form>
           )}
           {feedback && <p>{feedback}</p>}
           {previousAttempts.length > 0 && (
             <div className="previous-answer">
               <p>Previous Attempt:</p>
-              {previousAttempts.map((prevCharacter, index) => (
-                <div key={index}>
-                  <img
-                    src={prevCharacter?.image}
-                    alt={prevCharacter?.name}
-                    height={"auto"}
-                    width={"10%"}
-                  />
-                  Name: {prevCharacter?.name} | Class: {prevCharacter?.class} |
-                  Universe: {prevCharacter?.universe}
-                  <p>-----------------------------</p>
-                </div>
-              ))}
+              {previousAttempts.map((prevCharacter, index) => {
+                const { nameFeedback, classFeedback, universeFeedback } =
+                  getFeedbackForAttempt(prevCharacter);
+                return (
+                  <div key={index}>
+                    <img
+                      src={prevCharacter?.image}
+                      alt={prevCharacter?.name}
+                      height={"auto"}
+                      width={"10%"}
+                    />
+                    {nameFeedback} Name: {prevCharacter?.name} | {classFeedback}
+                    Class: {prevCharacter?.class} | {universeFeedback} Universe:{" "}
+                    {prevCharacter?.universe}
+                    <p>-----------------------------</p>
+                  </div>
+                );
+              })}
             </div>
           )}
         </>
